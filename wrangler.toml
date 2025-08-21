@@ -1,0 +1,20 @@
+name = "secure-worker"
+type = "javascript"
+
+account_id = "16c52eabc011ca2da50ec0b905f5a4a4"
+workers_dev = false
+compatibility_date = "2025-08-21"
+main = "src/index.js"
+
+routes = [
+  { pattern = "tunnel.cloudsandwich.fr/secure*", zone_name = "cloudsandwich.fr" }
+]
+
+[observability.logs]
+enabled = true
+
+[[r2_buckets]]
+binding = "FLAGS_BUCKET"
+bucket_name = "cfassignment-storage"
+preview_bucket_name = "cfassignment-storage"
+
