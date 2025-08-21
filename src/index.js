@@ -37,8 +37,10 @@ export default {
         <html lang="en">
         <head><meta charset="UTF-8"><title>User Info</title></head>
         <body>
-          <h1>${email} authenticated at ${timestamp} from ${country}</h1>
-          <a href="/secure/${country.toLowerCase()}">View Flag of ${country}</a>
+          <h1>
+            ${email} authenticated at ${timestamp} from 
+            <a href="/secure/${country.toLowerCase()}">${country}</a>
+          </h1>
         </body>
         </html>
       `;
